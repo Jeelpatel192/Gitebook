@@ -7,10 +7,11 @@ import { PiSignInBold } from "react-icons/pi";
 import { MdEditDocument } from "react-icons/md";
 
 import Logout from "./Logout";
+import { useAuthContext } from "../context/AuthContext";
 
 const Sidebar = () => {
-
-  const authUser = true;
+  //correct data
+  const { authUser } = useAuthContext();
 
   return (
     <aside className="flex flex-col items-center min-w-12 sm:w-16 top-0 left-0 h-screen py-8 overflow-y-auto border-r bg-glass
