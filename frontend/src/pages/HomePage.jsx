@@ -17,13 +17,13 @@ const HomePage = () => {
 	const [sortType, setSortType] = useState("recent");
 
 
-	const getUserProfileAndRepos = useCallback(async (username = "tanyarajhans") => {
+	const getUserProfileAndRepos = useCallback(async (username = "jeelpatel192") => {
 		setLoading(true);
 		try {
 			// 60 requests per hour, 5000 requests for authenticated requests
 			// const userRes = await fetch(`https://api.github.com/users/${username}`);
 
-			const res = await fetch(`http://localhost:5000/api/users/profile/${username}`);
+			const res = await fetch(`/api/users/profile/${username}`);
 			const { repos, userProfile } = await res.json();
 			// console.log(userProfile, "userProfile");
 
